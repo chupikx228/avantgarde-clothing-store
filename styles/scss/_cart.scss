@@ -1,0 +1,146 @@
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+  z-index: 1000;
+
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.cart {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  transition: right .3s ease;
+
+  &.open {
+    right: 0;
+  }
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+
+  h2 {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: "Helvetica-Bold", sans-serif;
+  }
+}
+
+.cart-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.cart-items {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.cart-item {
+  text-align: center;
+  margin-bottom: 40px;
+
+  img {
+    max-width: 220px;
+    margin-bottom: 16px;
+  }
+}
+
+.cart-item-title {
+  font-family: "Helvetica-Bold", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.cart-item-meta {
+  font-family: "Helvetica", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.cart-item-price {
+  font-family: "Helvetica", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.cart-qty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+
+  button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+}
+
+.cart-footer {
+  display: grid;
+  justify-items: center;
+  padding: 20px;
+  padding-bottom: 50px;
+  border-top: 1px solid #eee;
+}
+
+.cart-subtotal {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-family: "Helvetica", sans-serif;
+  font-weight: 400;
+}
+
+.checkout {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 14px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+@media (min-width: 1000px) {
+  .cart-footer {
+    padding-bottom: 10px;
+  }
+  .cart {
+    width: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cart {
+    width: 500px;
+  }
+}

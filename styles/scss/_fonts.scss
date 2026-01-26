@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Helvetica';
+  src: url('/avantgarde-clothing-store/assets/fonts/Helvetica.woff2') format('woff2');
+  //      ^^^^^^^^^^^^^^^^^^^^^^^^^ название твоего репозитория
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: condensed;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica-Bold';
+  src: url('/avantgarde-clothing-store/assets/fonts/Helvetica-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: condensed;
+  font-display: swap;
+}

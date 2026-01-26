@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Enfants Riches Déprimés</title>
+    <link rel="stylesheet" href="../styles/css/styles.css">
+    <script src="../scripts/products.js" defer></script>
+    <script src="../scripts/checkout.js" defer></script>
+    <script src="../scripts/countries-state.js" defer></script>
+</head>
+<body>
+<header class="co-header">
+    <a href="../index.html">
+    <div class="co-header__logo"><img src="../assets/LOGO.svg" alt="LOGO"></div>
+    </a>
+</header>
+<div class="co-container">
+<div class="co-order-summary">
+    <span class="co-order-summary__text">Order summary ▼</span>
+    <span class="co-order-summary__price" id="co-mobile-total">$0.00</span>
+</div>
+
+<aside class="co-sidebar co-sidebar--mobile">
+    <div id="co-order-items-mobile"></div>
+
+    <div class="co-discount">
+        <input type="text" class="co-discount__input" placeholder="Discount code">
+        <button class="co-discount__button">Apply</button>
+    </div>
+
+    <div class="co-totals">
+        <div class="co-totals__row">
+            <span class="co-totals__label">Subtotal</span>
+            <span class="co-subtotal-mobile">$0.00</span>
+        </div>
+        <div class="co-totals__row">
+            <span class="co-totals__label">Shipping</span>
+            <span>Calculated at next step</span>
+        </div>
+        <div class="co-totals__row co-totals__row--final">
+            <span class="co-totals__label">Total</span>
+            <span><span class="co-totals__currency">USD</span><span class="co-total-mobile">$0.00</span></span>
+        </div>
+    </div>
+</aside>
+
+<div class="co-checkout__container">
+    <main class="co-checkout">
+        <div class="co-breadcrumb">
+            <span class="co-breadcrumb__item co-breadcrumb__item--active">Information</span>
+            <span>›</span>
+            <span class="co-breadcrumb__item">Shipping</span>
+            <span>›</span>
+            <span class="co-breadcrumb__item">Payment</span>
+        </div>
+
+        <div class="co-checkout__content">
+            <div class="co-express">
+                <h3 class="co-express__title">Express checkout</h3>
+                <div class="co-express__buttons">
+                    <button class="co-express__button co-express__button--paypal">
+                        <img src="../assets/paypal-logo.png"> </button>
+                    <button class="co-express__button co-express__button--apple-pay">
+                        <img src="../assets/apple-pay.png"> </button>
+                    <button class="co-express__button co-express__button--gpay">
+                        <img src="../assets/google-pay.png"> </button>
+                </div>
+            </div>
+
+            <div class="co-divider">OR</div>
+
+            <div class="co-section">
+                <div class="co-section__header">
+                    Contact
+                </div>
+                <div class="co-form__group">
+                    <input type="email" class="co-form__input" placeholder="Email">
+                </div>
+                <div class="co-form__checkbox-group">
+                    <input type="checkbox" class="co-form__checkbox" id="co-newsletter">
+                    <label for="co-newsletter" class="co-form__checkbox-label">Email me with news and offers</label>
+                </div>
+            </div>
+
+            <div class="co-section">
+                <div class="co-section__header">Shipping address</div>
+
+                <div class="co-form__group">
+                    <label class="co-form__label">Country/Region</label>
+                    <select class="co-form__select">
+                        <option>United States</option>
+                    </select>
+                </div>
+
+                <div class="co-form__row">
+                    <div class="co-form__group">
+                        <input type="text" class="co-form__input" placeholder="First name (optional)">
+                    </div>
+                    <div class="co-form__group">
+                        <input type="text" class="co-form__input" placeholder="Last name">
+                    </div>
+                </div>
+
+                <div class="co-form__group">
+                    <input type="text" class="co-form__input" placeholder="Address">
+                </div>
+
+                <div class="co-form__group">
+                    <input type="text" class="co-form__input" placeholder="Apartment, suite, etc. (optional)">
+                </div>
+
+                <div class="co-form__row co-form__row--three-cols">
+                    <div class="co-form__group">
+                        <input type="text" class="co-form__input" placeholder="City">
+                    </div>
+                    <div class="co-form__group">
+                        <select class="co-form__select">
+                            <option>State</option>
+                        </select>
+                    </div>
+                    <div class="co-form__group">
+                        <input type="text" class="co-form__input" placeholder="ZIP code">
+                    </div>
+                </div>
+
+                <div class="co-form__group">
+                    <input type="tel" class="co-form__input" placeholder="Phone">
+                </div>
+
+                <div class="co-form__checkbox-group">
+                    <input type="checkbox" class="co-form__checkbox" id="co-save-info">
+                    <label for="co-save-info" class="co-form__checkbox-label">Save this information for next time</label>
+                </div>
+
+                <button class="co-form__button">Continue to shipping</button>
+            </div>
+
+            <div class="co-footer-link">
+            </div>
+        </div>
+    </main>
+
+    <aside class="co-sidebar co-sidebar--desktop">
+        <div id="co-order-items"></div>
+
+        <div class="co-discount">
+            <input type="text" class="co-discount__input" placeholder="Discount code">
+            <button class="co-discount__button">Apply</button>
+        </div>
+
+        <div class="co-totals">
+            <div class="co-totals__row">
+                <span class="co-totals__label">Subtotal</span>
+                <span id="co-subtotal">$0.00</span>
+            </div>
+            <div class="co-totals__row">
+                <span class="co-totals__label">Shipping</span>
+                <span>Calculated at next step</span>
+            </div>
+            <div class="co-totals__row co-totals__row--final">
+                <span class="co-totals__label">Total</span>
+                <span><span class="co-totals__currency">USD</span><span id="co-total">$0.00</span></span>
+            </div>
+        </div>
+    </aside>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title id="page-title">HOME</title>
+    <link rel="stylesheet" href="../styles/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../scripts/url-update.js" defer></script>
+    <script src="../scripts/products.js" defer></script>
+    <script src="../scripts/cart.js" defer></script>
+    <script src="../scripts/catalog.js" defer></script>
+    <script src="../scripts/product-page.js" defer></script>
+    <script src="../scripts/menu.js" defer></script>
+    <script src="../scripts/burger-menu.js" defer></script>
+    <script src="../scripts/add-to-cart.js" defer></script>
+    <script src="../scripts/related-items.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+    <a href="../index.html">
+    <img src="../assets/LOGO.svg" alt="LOGO" class="header__logo">
+    </a>
+
+    <div class="header__buttons" id="header__buttons">
+        <button class="nav-trigger" data-menu="homme">HOMME</button>
+        <button class="nav-trigger" data-menu="femme">FEMME</button>
+    </div>
+
+
+    <div class="header__buttons" id="cart">
+        <button>CART (<span id="cart-count-sidebar">0</span>)</button>
+    </div>
+
+    </div>
+    <button class="hamburger-icon">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </button>
+    <nav class="menu-items">
+        <a href="#">HOMME</a>
+        <a href="#">FEMME</a>
+        <a href="#" id="cart">CART</a>
+    </nav>
+    <div class="fullscreen-menu" id="fullscreen-menu">
+        <div class="menu-content">
+            <a href="#">NEW ARRIVALS</a>
+            <a href="#">READY TO WEAR</a>
+            <a href="#">SHOES</a>
+            <a href="#">BAGS</a>
+            <a href="#">JEWELRY</a>
+        </div>
+    </div>
+</header>
+
+
+<div class="cart-overlay"></div>
+
+<aside class="cart">
+    <div class="cart-header">
+        <h2>CART (<span id="cart-count">0</span>)</h2>
+        <button class="cart-close">×</button>
+    </div>
+
+    <div class="cart-items"></div>
+
+    <div class="cart-footer">
+        <p class="cart-subtotal">SUBTOTAL: $<span id="cart-total">0</span></p>
+        <button class="checkout" id="checkout">CONTINUE TO CHECKOUT</button>
+    </div>
+</aside>
+
+<div class="product__container">
+    <div class="product">
+        <div class="product__text">
+        <p id="title"></p>
+        <span id="shade"></span>
+            <div class="product__description-desktop">
+            <div class="product__description">
+                <p id="description-desktop"></p>
+            </div>
+            </div>
+        </div>
+        <img id="image" src="" alt="">
+
+        <div class="product__buttons-size">
+            <button>S</button>
+            <button>M</button>
+            <button>L</button>
+            <button>XL</button>
+            <div class="product__buttons-buy">
+                <button id="price-desktop" data-id="1"></button>
+            </div>
+        </div>
+        <div class="product__buttons-buy">
+            <button id="price" data-id="1"></button>
+        </div>
+
+        <div class="product__description">
+            <p id="description">123</p>
+        </div>
+    </div>
+</div>
+<div class="product__related-items-wrapper">
+    <p class="related-title">RELATED</p>
+    <div class="product__related-items" id="related-items">
+    </div>
+</div>
+
+</body>
+</html>

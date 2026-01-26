@@ -1,0 +1,391 @@
+const basePath = window.location.pathname.includes('/pages/') ? '../' : './';
+
+const products = [
+    {
+        id: 1,
+        title: "MADAME STALINE ZIP HOODIE (EXCLUSIVE)",
+        price: 1000,
+        image: `${basePath}assets/items/Picture.svg`,
+        shade: "FADED BLACK",
+        description: "LONG-SLEEVE ZIP HOODED SWEATSHIRT MADE OF HEAVYWEIGHT BRUSHED FRENCH TERRY. BOXY, DROP-SHOULDER FIT. DOUBLE LAYER HOOD. COTTON THERMAL LINED BODY. KANGAROO POCKET. RIB KNIT CUFFS AND WAISTBAND. PRINTED ARTWORK AT FRONT & BACK. MONOGRAM BRANDED HARDWARE. VINTAGE WASH PROCESS. DISTRESSING THROUGHOUT. MADE IN THE USA.",
+        type: "Clothes",
+        gender: "HOMME",
+        category: "NEW ARRIVALS"
+    },
+    {
+        id: 2,
+        title: "PSYCHOTHÉRAPIE D L'ADOLESCENT MOCKNECK LS T-SHIRT (EXCLUSIVE)",
+        price: 930,
+        image: `${basePath}assets/items/Picture-2.svg`,
+        shade: "FADED BLACK",
+        description: "THREE-QUARTER LENGTH SLEEVE MOCKNECK T-SHIRT MADE OF HEAVY WEIGHT COTTON JERSEY. BOXY, OVERSIZED FIT. PRINTED ARTWORK AT FRONT AND BACK. SINGLE STITCH HEM AT WAIST. SIGNATURE VINTAGE WASH PROCESS. MADE IN THE USA.",
+        type: "Clothes",
+        gender: "HOMME",
+        category: "READY TO WEAR"
+    },
+    {
+        id: 3,
+        title: "CHRISTIANE F BLANKET (HOLIDAY EXCLUSIVE)",
+        price: 5100,
+        image: `${basePath}assets/items/Picture-3.svg`,
+        shade: "GRAY / BLACK",
+        description: "WOOL & CASHMERE BLEND BLANKET BY LORO PIANA. JACQUARD ARTWORK THROUGHOUT. MADE IN ITALY. 135CM X 170CM",
+        type: "Accessories",
+        gender: "HOMME",
+        category: "NEW ARRIVALS"
+    },
+    {
+        id: 4,
+        title: "PAJAMA SET",
+        price: 4100,
+        image: `${basePath}assets/items/Picture-4.svg`,
+        shade: "GREEN / BLACK",
+        description: "PAJAMA SET IN SILK. ROUNDED SPREAD COLLAR. BUTTON FRONT. THREE PATCH POCKETS IN FRONT. PIPING THROUGHOUT. ELASTIC WAISTBAND PANT. MADE IN THE USA.",
+        type: "Clothes",
+        gender: "HOMME",
+        category: "READY TO WEAR"
+    },
+    {
+        id: 5,
+        title: "BAUHAUS BLANKET (HOLIDAY EXCLUSIVE)",
+        price: 930,
+        image: `${basePath}assets/items/Picture-5.svg`,
+        shade: "BROWN / GREEN",
+        description: "WOOL & CASHMERE BLEND BLANKET BY LORO PIANA. JACQUARD ARTWORK THROUGHOUT. MADE IN ITALY.",
+        type: "Accessories",
+        gender: "HOMME",
+        category: "READY TO WEAR"
+    },
+    {
+        id: 6,
+        title: "BUTTON DOWN TURTLENECK",
+        price: 2650,
+        image: `${basePath}assets/items/Picture-6.svg`,
+        shade: "BROWN",
+        description: "TURTLENECK BUTTON-FRONT CARDIGAN IN LORO PIANA CASHMERE. ASYMMETRIC CABLE KNIT PATTERN. LOGO-BRANDED METAL BUTTONS WITH ANTIQUE FINISH. MADE IN USA.",
+        type: "Clothes",
+        gender: "HOMME",
+        category: "NEW ARRIVALS"
+    },
+    {
+        id: 7,
+        title: "THE LATENCY LS T-SHIRT",
+        price: 1075,
+        image: `${basePath}assets/items/Picture-7.svg`,
+        shade: "ANTIQUE BLACK WITH PAINT",
+        description: "LONG-SLEEVE T-SHIRT IN HEAVY WEIGHT COTTON JERSEY. LONGER, DROP SHOULDER FIT. RIB KNIT NECKLINE AND CUFFS. SINGLE STITCH HEM AT WAIST. PRINTED ARTWORK AT FRONT, BACK, AND SLEEVES. SIGNATURE VINTAGE WASH PROCESS. MADE IN THE USA.",
+        type: "Clothes",
+        gender: "HOMME",
+        category: "READY TO WEAR"
+    },
+    {
+        id: 8,
+        title: "PERFECT FLARE TROUSER",
+        price: 2400,
+        image: `${basePath}assets/items/Picture-8.svg`,
+        shade: "BLACK PINSTRIPE",
+        description: "PLEATED TROUSERS IN ITALIAN VIRGIN WOOL. HOOK & EYE WAIST CLOSURE. ZIP FLY. HOLLYWOOD WAISTBAND. REAR FLAP POCKET WITH BUTTON CLOSURE & OPEN WELT POCKET. MADE IN ITALY.",
+        type: "Clothes",
+        gender: "HOMME",
+        category: "READY TO WEAR"
+    },
+    {
+        id: 9,
+        title: "NIETZSCHE T-SHIRT",
+        price: 1075,
+        image: `${basePath}assets/items/Picture-9.svg`,
+        shade: "BURNOUT GRAY",
+        description: "SHORT-SLEEVE T-SHIRT IN LIGHT WEIGHT VINTAGE TEXTURE COTTON JERSEY. BOXY FIT. RIB KNIT NECKLINE. SINGLE STITCH HEM AT WAIST AND CUFFS. PRINTED ARTWORK AT FRONT. SIGNATURE VINTAGE WASH PROCESS. DISTRESSING THROUGHOUT. MADE IN THE USA.",
+        type: "Clothes",
+        gender: "HOMME",
+        category: "NEW ARRIVALS"
+    },
+    {
+        id: 10,
+        title: "BROTHERHOOD OF SLEEP LS T-SHIRT (HOLIDAY EXCLUSIVE)",
+        price: 1190,
+        image: `${basePath}assets/items/Picture-10.svg`,
+        shade: "WASHED BLACK",
+        description: "LONG-SLEEVE T-SHIRT IN HEAVY WEIGHT COTTON JERSEY. BOXY, CROPPED FIT. RIB KNIT NECKLINE AND CUFFS. RAW HEM. PRINTED ARTWORK AT FRONT, BACK & SLEEVES. SIGNATURE VINTAGE WASH PROCESS. MADE IN THE USA.",
+        type: "Clothes",
+        gender: "HOMME",
+        category: "READY TO WEAR"
+    },
+    {
+        id: 11,
+        title: "TEENAGE SNUFF T-SHIRT",
+        price: 1300,
+        image: `${basePath}assets/items/Picture-11.svg`,
+        shade: "ARMY WHITE",
+        description: "SHORT-SLEEVE T-SHIRT IN LIGHT WEIGHT VINTAGE TEXTURE COTTON JERSEY. BOXY FIT. RIB KNIT NECKLINE. SINGLE STITCH HEM AT WAIST AND CUFFS. PRINTED ARTWORK AT FRONT AND BACK. SIGNATURE VINTAGE WASH PROCESS. DISTRESSING THROUGHOUT. MADE IN THE USA.",
+        type: "Clothes",
+        gender: "HOMME",
+        category: "NEW ARRIVALS"
+    },
+    {
+        id: 12,
+        title: "TWO WARS WITHIN ONE ASSEMBLAGE ZIP HOODIE",
+        price: 2295,
+        image: `${basePath}assets/items/Picture-12.svg`,
+        shade: "BLACK",
+        description: "LONG-SLEEVE ZIP HOODED SWEATSHIRT MADE OF HEAVY WEIGHT BRUSHED FRENCH TERRY. BOXY, DROP-SHOULDER FIT. DOUBLE LAYER HOOD. COTTON THERMAL LINED BODY. KANGAROO POCKET. RIB KNIT CUFFS AND WAISTBAND. PATCHWORK PRINTED ARTWORK THROUGHOUT. MONOGRAM BRANDED HARDWARE. VINTAGE WASH PROCESS. DISTRESSING THROUGHOUT. MADE IN THE USA.",
+        type: "Clothes",
+        gender: "HOMME",
+        category: "READY TO WEAR"
+    },
+    {
+        id: 13,
+        title: "POCKET WATCH DOCTOR BAG",
+        price: 3000,
+        image: `${basePath}assets/items/Picture-13.svg`,
+        shade: "BLACK",
+        description: "CALFSKIN LEATHER GLADSTONE BAG WITH INSET PATEK PHILIPPE POCKET WATCH. MADE IN ITALY.SHIPS IN 2-3 WEEKS.",
+        type: "Bag",
+        gender: "FEMME",
+        category: "BAGS"
+    },
+    {
+        id: 14,
+        title: "XE1V GLOVES",
+        price: 1100,
+        image: `${basePath}assets/items/Picture-14.svg`,
+        shade: "BLACK / IVORY",
+        description: "DRIVING GLOVES IN LAMBSKIN LEATHER. TWO-TONE PANELLING. CUSTOM BRANDED IRON CROSS METAL APPLIQUE. MADE IN ITALY.",
+        type: "Accessories",
+        gender: "HOMME",
+        category: "NEW ARRIVALS"
+    },
+    {
+        id: 15,
+        title: "VESTIAIRE POUR DAMES HOODIE",
+        price: 1625,
+        image: `${basePath}assets/items/Picture-15.svg`,
+        shade: "FADED BLACK WITH PAINT",
+        description: "LONG-SLEEVE PULLOVER HOODED SWEATSHIRT MADE OF HEAVY WEIGHT BRUSHED FRENCH TERRY. BOXY, DROP-SHOULDER FIT. DOUBLE LAYER HOOD. RIB KNIT CUFFS & WAISTBAND. PRINTED ARTWORK AT FRONT, BACK, & SLEEVE. SIGNATURE VINTAGE WASH PROCESS. DISTRESSING THROUGHOUT. MADE IN THE USA.",
+        type: "Clothes",
+        gender: "HOMME",
+        category: "READY TO WEAR"
+    },
+    {
+        id: 16,
+        title: "DIVINE IMAGE EARRING (HOLIDAY EXCLUSIVE)",
+        price: 1950,
+        image: `${basePath}assets/items/Picture-16.svg`,
+        shade: "ANTIQUE SILVER",
+        description: "SINGLE POST BACK EARRING IN .925 STERLING SILVER . IRON CROSS, EAGLE, & SNAKE MOTIF. MADE IN THE USA.",
+        type: "Accessories",
+        gender: "FEMME",
+        category: "JEWELRY"
+    },
+    {
+        id: 17,
+        title: "VIVIENNE FUR COAT",
+        price: 15800,
+        image: `${basePath}assets/items/Picture-17.svg`,
+        shade: "BLACK / GRAY",
+        description: "FULL LENGTH ZIP-FRONT FUR COAT. PONY HAIR & CALFSKIN LEATHER PANELLED CONSTRUCTION. SILVER FOX FUR COLLAR. VISCOSE TWILL LINING. EELSKIN LEATHER BELT AT WAIST WITH SIGNATURE ROSE BUCKLE CLOSURE. FLAP POCKETS AT WAIST WITH ADJUSTABLE BUCKLE DETAIL. CENTER VENT AT BACK HEM. MADE IN ITALY.",
+        type: "Clothes",
+        gender: "FEMME",
+        category: "NEW ARRIVALS"
+    },
+    {
+        id: 18,
+        title: "PUKE & CRY POLO SWEATER",
+        price: 1350,
+        image: `${basePath}assets/items/Picture-18.svg`,
+        shade: "BROWN / MULTI",
+        description: "ZIP-COLLAR PULLOVER SWEATER IN COTTON & WOOL. CUSTOM KNIT MODIFIED CHECKERBOARD PATTERN. RIB KNIT COLLAR & BODY HEM. RAW HEM DETAIL AT WRISTS. MADE IN ITALY.",
+        type: "Clothes",
+        gender: "HOMME",
+        category: "READY TO WEAR"
+    },
+    {
+        id: 19,
+        title: "SUNDAY RIDING BLAZER",
+        price: 3750,
+        image: `${basePath}assets/items/Picture-19.svg`,
+        shade: "FAWN",
+        description: "CROPPED BLAZER IN ITALIAN VIRGIN WOOL. VISCOSE TWILL LINING. POINTED COLLAR. DOUBLE BESOM POCKET AT CHEST. FLAP POCKETS AT WAIST. BUTTON FRONT. MADE IN ITALY.",
+        type: "Clothes",
+        gender: "FEMME",
+        category: "READY TO WEAR"
+    },
+    {
+        id: 20,
+        title: "SUNDAY RIDING BLAZER",
+        price: 3900,
+        image: `${basePath}assets/items/Picture-20.svg`,
+        shade: "BLACK",
+        description: "CROPPED BLAZER IN ITALIAN SILK/WOOL. VISCOSE TWILL LINING. POINTED COLLAR. DOUBLE BESOM POCKET AT CHEST. FLAP POCKETS AT WAIST. BUTTON FRONT. MADE IN ITALY.",
+        type: "Clothes",
+        gender: "FEMME",
+        category: "NEW ARRIVALS"
+    },
+    {
+        id: 21,
+        title: "KITTEN HEEL WITH SPATS",
+        price: 3400,
+        image: `${basePath}assets/items/Picture-21.svg`,
+        shade: "BLACK",
+        description: "ZIP UP THIGH HIGH HEELS IN BUFFED CALF LEATHER. CUSTOM METAL BUCKLE FASTENERS THROUGHOUT LATERAL SIDE. MEDIAL SIDE ZIP ENTRY. LEATHER KITTEN HEEL. LEATHER SOLE. MADE IN ITALY",
+        type: "Shoes",
+        gender: "FEMME",
+        category: "SHOES"
+    },
+    {
+        id: 22,
+        title: "VESTIAIRE POUR DAMES T-SHIRT",
+        price: 660,
+        image: `${basePath}assets/items/Picture-22.svg`,
+        shade: "FADED BLACK",
+        description: "SHORT-SLEEVE T-SHIRT MADE OF HEAVY WEIGHT COTTON JERSEY. LONGER, OVERSIZED FIT. RIB KNIT NECKLINE. SINGLE STITCH HEM AT CUFF AND WAIST. PRINTED ARTWORK AT FRONT AND BACK. VINTAGE WASH PROCESS. MADE IN THE USA.",
+        type: "Clothes",
+        gender: "HOMME",
+        category: "READY TO WEAR"
+    },
+    {
+        id: 23,
+        title: "AUSTRIAN WEEKEND JACKET",
+        price: 2300,
+        image: `${basePath}assets/items/Picture-23.svg`,
+        shade: "BLACK",
+        description: "BLAZER IN CALFSKIN LEATHER. VISCOSE TWILL LINING. NOTCH LAPEL. BUTTON CLOSURE WITH BOUND BUTTONHOLES. SLIGHTLY CROPPED FIT. CHEST POCKET WITH TRIPLE BUTTON CLOSURE DETAIL. PATCH POCKETS AT WAIST. BELTED BACK WITH SIGNATURE BUCKLES AT SIDES. MADE IN ITALY.",
+        type: "Clothes",
+        gender: "FEMME",
+        category: "READY TO WEAR"
+    },
+    {
+        id: 24,
+        title: "WELDER BOOT",
+        price: 2630,
+        image: `${basePath}assets/items/Picture-24.svg`,
+        shade: "BLACK / DIRTY GREEN",
+        description: "PULL-ON BOOT IN CALFSKIN LEATHER & SUEDE. CALF-HIGH. PULL ON STRAPS. CONTRAST SUEDE QUARTER PANELS. THICK RUBBER SOLE. MADE IN ITALY.",
+        type: "Shoes",
+        gender: "HOMME",
+        category: "SHOES"
+    },
+    {
+        id: 25,
+        title: "TIERED PLEATED SKIRT",
+        price: 2200,
+        image: `${basePath}assets/items/Picture-25.svg`,
+        shade: "BLACK",
+        description: "CALF-LENGTH SKIRT IN ITALIAN VIRGIN WOOL. VISCOSE TWILL LINING. THREE TIERS OF PLEATED FABRIC. ADJUSTABLE BELT CLOSURE DETAIL AT WAISTBAND SIDE. SIGNATURE WHITE BRONZE BUCKLE. MADE IN ITALY.",
+        type: "Clothes",
+        gender: "FEMME",
+        category: "NEW ARRIVALS"
+    },
+    {
+        id: 26,
+        title: "CLASSIC LOGO T-SHIRT (ERD ONLINE EXCLUSIVE)",
+        price: 790,
+        image: `${basePath}assets/items/Picture-26.svg`,
+        shade: "ANTIQUE BLACK",
+        description: "SHORT-SLEEVE T-SHIRT IN LIGHTWEIGHT VINTAGE TEXTURE COTTON JERSEY. BOXY FIT. RIB KNIT NECKLINE. SINGLE STITCH HEM AT WAIST AND CUFFS. PRINTED ARTWORK AT FRONT. SIGNATURE VINTAGE WASH PROCESS. DISTRESSING THROUGHOUT. MADE IN THE USA.",
+        type: "Clothes",
+        gender: "HOMME",
+        category: "NEW ARRIVALS"
+    },
+    {
+        id: 27,
+        title: "DOG IN RESTRAINT SKIRT",
+        price: 2850,
+        image: `${basePath}assets/items/Picture-27.svg`,
+        shade: "BLACK / WHITE / MULTI",
+        description: "PLEATED MINI SKIRT IN PLAID ITALIAN WOOL. CALFSKIN LEATHER WAIST BELT WITH CUSTOM CAST WHITE BRONZE BUCKLES. MADE IN ITALY.",
+        type: "Clothes",
+        gender: "FEMME",
+        category: "READY TO WEAR"
+    },
+    {
+        id: 28,
+        title: "LEATHER SIDE BUCKLE MINI SKIRT",
+        price: 3150,
+        image: `${basePath}assets/items/Picture-28.svg`,
+        shade: "OLIVE",
+        description: "MINI SKIRT IN CALFSKIN SUEDE. SILK TWILL LINING. CROSSOVER FRONT WITH SIGNATURE WHITE BRONZE BUCKLE CLOSURE. MADE IN USA.",
+        type: "Clothes",
+        gender: "FEMME",
+        category: "READY TO WEAR"
+    },
+    {
+        id: 29,
+        title: "WELDER BOOT",
+        price: 2630,
+        image: `${basePath}assets/items/Picture-29.svg`,
+        shade: "BLACK",
+        description: "PULL-ON BOOT IN CALFSKIN LEATHER. CALF-HIGH. PULL ON STRAPS. THICK RUBBER SOLE. MADE IN ITALY.",
+        type: "Shoes",
+        gender: "HOMME",
+        category: "SHOES"
+    },
+    {
+        id: 30,
+        title: "CLASSIC LOGO DISTRESSED THERMAL LS",
+        price: 980,
+        image: `${basePath}assets/items/Picture-30.svg`,
+        shade: "FOREST GREEN",
+        description: "LONG SLEEVE THERMAL SHIRT IN COTTON RASCHEL KNIT. CLASSIC FIT. RIB KNIT NECKLINE & CUFFS. ARTWORK PRINTED AT FRONT. SIGNATURE VINTAGE WASH PROCESS. MADE IN JAPAN.",
+        type: "Clothes",
+        gender: "HOMME",
+        category: "READY TO WEAR"
+    },
+    {
+        id: 31,
+        title: "REVEREND HOODIE",
+        price: 1610,
+        image: `${basePath}assets/items/Picture-31.svg`,
+        shade: "SUN FADED BLACK",
+        description: "LONG-SLEEVE PULLOVER HOODED SWEATSHIRT MADE OF HEAVY WEIGHT BRUSHED FRENCH TERRY. BOXY, DROP-SHOULDER FIT. DOUBLE LAYER HOOD. RIB KNIT CUFFS & WAISTBAND. PRINTED ARTWORK AT FRONT & BACK. SIGNATURE VINTAGE WASH PROCESS. MADE IN THE USA.",
+        type: "Clothes",
+        gender: "HOMME",
+        category: "NEW ARRIVALS"
+    },
+    {
+        id: 32,
+        title: "DORA SHIRT",
+        price: 1750,
+        image: `${basePath}assets/items/Picture-32.svg`,
+        shade: "GREEN",
+        description: "LONG SLEEVE BUTTON FRONT SHIRT IN ITALIAN WOOL BLEND. POINTED SHIRT COLLAR. CUSTOM CAST CHERUB BUTTONS. MADE IN ITALY.",
+        type: "Clothes",
+        gender: "FEMME",
+        category: "READY TO WEAR"
+    },
+    {
+        id: 33,
+        title: "IL POSSESSO HOODIE",
+        price: 1610,
+        image: `${basePath}assets/items/Picture-33.svg`,
+        shade: "LIGHT ANTIQUE BLACK",
+        description: "LONG-SLEEVE PULLOVER HOODED SWEATSHIRT IN MEDIUM WEIGHT JAPANESE LOOPWHEELED COTTON TERRY FLEECE. SLIGHT CROP, SLIGHT DROP-SHOULDER FIT. DOUBLE LAYER HOOD. RIB KNIT CUFFS & WAISTBAND. PRINTED ARTWORK AT FRONT AND BACK. SIGNATURE VINTAGE WASH PROCESS. DISTRESSING THROUGHOUT WITH HAND STITCHED REPAIRS ON SLEEVES. MADE IN THE USA.",
+        type: "Clothes",
+        gender: "HOMME",
+        category: "READY TO WEAR"
+    },
+    {
+        id: 34,
+        title: "NEW STRAIGHT LEG JEANS",
+        price: 1620,
+        image: `${basePath}assets/items/Picture-34.svg`,
+        shade: "FADED BLUE",
+        description: "STRAIGHT LEG JEANS IN 100% COTTON 14OZ JAPANESE DENIM. MID-RISE. FIVE-POCKET STYLING. WIDER LEG. BUTTON-FLY. BELT LOOPS AT WAISTBAND. ERD-BRANDED HARDWARE. EMBOSSED LOGO PATCH AT BACK WAISTBAND. HEAVY VINTAGE WASH PROCESS. DISTRESSING THROUGHOUT. MADE IN JAPAN.",
+        type: "Clothes",
+        gender: "HOMME",
+        category: "NEW ARRIVALS"
+    },
+    {
+        id: 35,
+        title: "ERD CLASSIC LOGO HOODIE (ERD ONLINE EXCLUSIVE)",
+        price: 1500,
+        image: `${basePath}assets/items/Picture-35.svg`,
+        shade: "PAINT BLACK",
+        description: "LONG-SLEEVE PULLOVER HOODED SWEATSHIRT MADE OF HEAVYWEIGHT BRUSHED FRENCH TERRY. BOXY, DROP-SHOULDER FIT. DOUBLE LAYER HOOD. RIB KNIT CUFFS & WAISTBAND. PRINTED ARTWORK AT FRONT. SIGNATURE VINTAGE WASH PROCESS. DISTRESSING THROUGHOUT. MADE IN THE USA.",
+        type: "Clothes",
+        gender: "HOMME",
+        category: "READY TO WEAR"
+    }
+];
+
+window.products = products;
